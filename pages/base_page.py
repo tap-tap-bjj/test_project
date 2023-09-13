@@ -18,13 +18,12 @@ class BasePage():
             return False
         return True
 
-    def element_click(self, how, what):
-        element = self.browser.find_element(how, what)
-        element.click()
-
-    def element_text(self, how, what):
-        element = self.browser.find_element(how, what)
-        return element.text
+    def try_find_element(self, how, what):
+        try:
+            element = self.browser.find_element(how, what)
+        except NoSuchElementException:
+            return print('No such element')
+        return element
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
