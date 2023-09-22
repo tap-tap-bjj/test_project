@@ -1,5 +1,5 @@
-from base_page import BasePage
-from locators import ProductPageLocators
+from .base_page import BasePage
+from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
     def item_should_be_in_basket(self):
