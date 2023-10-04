@@ -5,7 +5,7 @@ class ProductPage(BasePage):
     def item_should_be_in_basket(self):
         self.should_be_button_basket()
         self.try_find_element(*ProductPageLocators.BASKET_BUTTON).click()
-        #self.solve_quiz_and_get_code()
+        self.solve_quiz_and_get_code()
         self.right_item_in_basket()
         self.right_price_in_basket()
 
